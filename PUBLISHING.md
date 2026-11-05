@@ -11,6 +11,19 @@
 | npm | **live** — `dsh-workspace-tints@1.0.0`, published 2026-11-05T00:22Z |
 | `veduis.com/dsh/` index | not set up (needs upload to the site) |
 
+## Community listings
+
+| Directory | How it takes entries | Status |
+| --- | --- | --- |
+| `zhu1090093659/dsh-community-plugins` — feeds the Workshop store and dsh-market.com | PR appending one object to `community.json` | [PR #79](https://github.com/zhu1090093659/dsh-community-plugins/pull/79), CI green |
+| `Dominic789654/awesome-deepseek-harness` | PR, one insert-only line in both READMEs | [PR #733](https://github.com/Dominic789654/awesome-deepseek-harness/pull/733), checks green |
+| `imsai-sh/awesome-deepseek-harness-plugins` (1024 Store, public API) | PR adding one `catalog/plugins/*.json` | [PR #816](https://github.com/imsai-sh/awesome-deepseek-harness-plugins/pull/816) — **merged** |
+| `awesome-dsh-plugin/awesome-dsh-plugin` (feeds `dsh-plugin-catalog` → dsh-market) | PR, one YAML file; repo must be ≥1 day old | branch staged, PR fires 2026-11-05 17:20 MST |
+| `AdamPlatin123/dsh-plugin-radar`, `dshworks/awesome-dsh-plugins`, `bradeGithub/DSH-Plugins-Marketplace`, `0xsline`, `bruc3van`, `like-study1`, `LivXue` | crawl the `dsh-plugin` topic | automatic — topic is set |
+| `vlln/plugin-registry`, `DKSlin/dsh-plugins` | none — personal repos, no contribution path | not applicable |
+
+Topics carried: `dsh`, `dsh-plugin`, `dsh-plugins`, `dsh-bundle`, `deepseek-harness`, `sidebar`, `theme`, `ui`, `workspace`.
+
 Install straight from the release while npm is pending:
 
 ```sh
