@@ -1,0 +1,58 @@
+{
+  "name": "dsh-workspace-tints",
+  "version": "1.0.0",
+  "description": "Quiet gradient tints, a finished-unread green row, and a Workspace/Session hierarchy for the DeepSeek Harness sidebar.",
+  "type": "module",
+  "author": {
+    "name": "Veduis",
+    "url": "https://veduis.com"
+  },
+  "homepage": "https://veduis.com",
+  "license": "MIT",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "workspace",
+    "tints",
+    "sidebar",
+    "theme",
+    "ui"
+  ],
+  "engines": {
+    "dsh": "^0.2.1-rc.5"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "screenshots/*.png"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-workspace"
+      ]
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Veduis/dsh-workspace-tints.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Veduis/dsh-workspace-tints/issues"
+  }
+}

@@ -1,0 +1,272 @@
+/*
+ * Demo styles for the marketing renders.
+ *
+ * These mirror the declarations the plugin actually generates — same tones,
+ * same color-mix percentages, same sizes — against the shipped theme tokens, so
+ * the images show the real treatment rather than an artist's impression.
+ *
+ * Workspace and Session names are invented; no real project of the publisher
+ * appears here.
+ */
+
+:root {
+  --font: "Inter", "Noto Sans", "Liberation Sans", Arial, sans-serif;
+  --radius-md: 12px;
+  --radius-sm: 8px;
+  --success: #22c55e;
+}
+
+[data-theme="light"] {
+  --base: #ffffff;
+  --fill: #f9fafb;
+  --label: #0f1115;
+  --label2: #61666b;
+  --label3: #81858c;
+  --border: #0000000a;
+  --hover: #2631480f;
+}
+
+[data-theme="dark"] {
+  --base: #0f1115;
+  --fill: #1b1b1c;
+  --label: #f9fafb;
+  --label2: #cfd3d6;
+  --label3: #adb2b8;
+  --border: #ffffff0f;
+  --hover: #ffffff14;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--base);
+}
+
+body {
+  font-family: var(--font);
+  color: var(--label);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.stage {
+  display: flex;
+  width: 640px;
+  height: 780px;
+  overflow: hidden;
+}
+
+/* ---------------------------------------------------------------- sidebar */
+
+.sidebar {
+  width: 320px;
+  flex: none;
+  background: var(--fill);
+  border-right: 0.5px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  padding: 14px 10px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 2px 6px 14px;
+  color: var(--label2);
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.brand svg {
+  color: var(--label);
+  opacity: 0.85;
+}
+
+.new-session {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 34px;
+  margin: 0 2px 14px;
+  padding: 0 10px;
+  border-radius: var(--radius-sm);
+  background: var(--hover);
+  color: var(--label);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.new-session .kbd {
+  margin-left: auto;
+  font-size: 11px;
+  color: var(--label3);
+}
+
+.section-head {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 6px 8px;
+  color: var(--label3);
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.section-head .spacer {
+  margin-left: auto;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 30px;
+  margin: 0 2px 6px;
+  padding: 0 10px;
+  border-radius: var(--radius-sm);
+  border: 0.5px solid var(--border);
+  color: var(--label3);
+  font-size: 12.5px;
+}
+
+/* ------------------------------------------------------------------ rows */
+
+.groups {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: var(--radius-md);
+  user-select: none;
+}
+
+.row.group {
+  height: 34px;
+  margin-top: 6px;
+  padding: 0 8px;
+  box-shadow: inset 2px 0 0 color-mix(in oklab, var(--tone) 48%, var(--fill));
+  background-image: linear-gradient(
+    90deg,
+    color-mix(in oklab, var(--tone) 17%, var(--fill)) 0%,
+    color-mix(in oklab, var(--tone) 7%, var(--fill)) 52%,
+    transparent 100%
+  );
+}
+
+.row.session {
+  height: 32px;
+  padding: 0 20px;
+  box-shadow: inset 2px 0 0 color-mix(in oklab, var(--tone) 48%, var(--fill));
+}
+
+.row.session.done {
+  background-image: linear-gradient(
+    90deg,
+    color-mix(in oklab, var(--success) 30%, transparent) 0%,
+    color-mix(in oklab, var(--success) 18%, transparent) 55%,
+    color-mix(in oklab, var(--success) 8%, transparent) 100%
+  );
+}
+
+.ico {
+  width: 16px;
+  height: 20px;
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--label3);
+}
+
+.row.group .ico {
+  color: color-mix(in oklab, var(--tone) 55%, var(--label2));
+}
+
+.gtitle {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--label);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.stitle {
+  flex: 1;
+  min-width: 0;
+  font-size: 13px;
+  color: var(--label);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.slot {
+  width: 16px;
+  height: 20px;
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dot {
+  position: relative;
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  color: color-mix(in oklab, var(--label3) 75%, transparent);
+}
+
+.dot::after {
+  content: "";
+  position: absolute;
+  inset: 20%;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.session.done .dot {
+  color: var(--success);
+}
+
+.time {
+  flex: none;
+  font-size: 10px;
+  line-height: 16px;
+  color: var(--label3);
+}
+
+.pin {
+  flex: none;
+  width: 16px;
+  height: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--label3);
+  margin-left: 6px;
+}
+
+/* ----------------------------------------------------------------- canvas */
+
+.canvas {
+  flex: 1;
+  background:
+    radial-gradient(120% 90% at 20% 0%, color-mix(in oklab, var(--fill) 55%, var(--base)) 0%, transparent 60%),
+    var(--base);
+}

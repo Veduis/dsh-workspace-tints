@@ -1,0 +1,212 @@
+<!doctype html>
+<html data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="demo.css" />
+    <style>
+      html,
+      body {
+        width: 900px;
+        height: 800px;
+      }
+      .settings {
+        display: flex;
+        width: 900px;
+        height: 800px;
+        background: var(--base);
+      }
+      .nav {
+        width: 236px;
+        flex: none;
+        border-right: 0.5px solid var(--border);
+        padding: 22px 14px;
+        background: color-mix(in oklab, var(--fill) 55%, var(--base));
+      }
+      .nav h1 {
+        margin: 0 8px 18px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .nav a {
+        display: block;
+        padding: 8px 10px;
+        margin-bottom: 2px;
+        border-radius: var(--radius-sm);
+        color: var(--label2);
+        font-size: 13px;
+        text-decoration: none;
+      }
+      .nav a.active {
+        background: var(--hover);
+        color: var(--label);
+        font-weight: 500;
+      }
+      .panel {
+        flex: 1;
+        padding: 34px 40px;
+        overflow: hidden;
+      }
+      .panel h2 {
+        margin: 0 0 8px;
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: -0.01em;
+      }
+      .panel p {
+        margin: 0;
+        font-size: 13px;
+        line-height: 20px;
+        color: var(--label2);
+        max-width: 540px;
+      }
+      .block {
+        margin-top: 26px;
+      }
+      .block-label {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 13px;
+        color: var(--label);
+      }
+      .segmented {
+        display: inline-flex;
+        gap: 6px;
+      }
+      .segmented span {
+        height: 28px;
+        padding: 0 14px;
+        border-radius: var(--radius-sm);
+        border: 0.5px solid var(--border);
+        color: var(--label2);
+        font-size: 12px;
+        line-height: 27px;
+      }
+      .segmented span.on {
+        background: var(--hover);
+        color: var(--label);
+      }
+      .legend {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        max-width: 540px;
+      }
+      .legend li {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 9px 0;
+        border-top: 0.5px solid var(--border);
+      }
+      .swatch {
+        flex: none;
+        width: 36px;
+        height: 12px;
+        border-radius: 999px;
+      }
+      .legend .name {
+        font-size: 13px;
+        color: var(--label);
+        line-height: 18px;
+      }
+      .legend .path {
+        font-size: 12px;
+        color: var(--label3);
+        line-height: 16px;
+      }
+      .notes {
+        margin-top: 22px;
+        max-width: 540px;
+        font-size: 12px;
+        line-height: 18px;
+        color: var(--label3);
+      }
+      .notes p {
+        margin: 0 0 6px;
+        font-size: 12px;
+        line-height: 18px;
+        color: var(--label3);
+      }
+      .notes .done {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="settings">
+      <nav class="nav">
+        <h1>Settings</h1>
+        <a href="#">General</a>
+        <a href="#" class="active">Workspace tints</a>
+        <a href="#">Models</a>
+        <a href="#">Plugins</a>
+        <a href="#">Account</a>
+      </nav>
+      <section class="panel">
+        <h2>Workspace tints</h2>
+        <p>
+          Each Workspace keeps one tone from a single warm-to-cool gradient of
+          tinted whites. The tone washes its header and draws a thin rail beside
+          its Sessions, so neighbouring Workspaces separate without adding loud
+          colour. The ramp skips green, which is reserved for finished chats.
+        </p>
+
+        <div class="block">
+          <span class="block-label">Intensity</span>
+          <div class="segmented">
+            <span>Off</span><span>Whisper</span><span class="on">Soft</span>
+          </div>
+        </div>
+
+        <div class="block">
+          <span class="block-label">Current tones</span>
+          <ul class="legend">
+            <li>
+              <span class="swatch" style="background: linear-gradient(90deg, color-mix(in oklab, oklch(0.62 0.052 8) 70%, transparent), color-mix(in oklab, oklch(0.62 0.052 8) 16%, transparent))"></span>
+              <span><span class="name">Aurora Studio</span><br /><span class="path">/work/aurora-studio</span></span>
+            </li>
+            <li>
+              <span class="swatch" style="background: linear-gradient(90deg, color-mix(in oklab, oklch(0.62 0.052 246) 70%, transparent), color-mix(in oklab, oklch(0.62 0.052 246) 16%, transparent))"></span>
+              <span><span class="name">Lighthouse Ops</span><br /><span class="path">/work/lighthouse-ops</span></span>
+            </li>
+            <li>
+              <span class="swatch" style="background: linear-gradient(90deg, color-mix(in oklab, oklch(0.62 0.052 300) 70%, transparent), color-mix(in oklab, oklch(0.62 0.052 300) 16%, transparent))"></span>
+              <span><span class="name">Paper Kite</span><br /><span class="path">/work/paper-kite</span></span>
+            </li>
+            <li>
+              <span class="swatch" style="background: linear-gradient(90deg, color-mix(in oklab, oklch(0.62 0.052 40) 70%, transparent), color-mix(in oklab, oklch(0.62 0.052 40) 16%, transparent))"></span>
+              <span><span class="name">Foundry Labs</span><br /><span class="path">/work/foundry-labs</span></span>
+            </li>
+            <li>
+              <span class="swatch" style="background: linear-gradient(90deg, color-mix(in oklab, oklch(0.62 0.052 210) 70%, transparent), color-mix(in oklab, oklch(0.62 0.052 210) 16%, transparent))"></span>
+              <span><span class="name">Cedar &amp; Co</span><br /><span class="path">/work/cedar-and-co</span></span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="notes">
+          <p>
+            A tone is remembered per folder. A new Workspace takes the tone
+            farthest from the ones in use, so the Workspaces you already know
+            keep their colour.
+          </p>
+          <p class="done">
+            <span
+              class="swatch"
+              style="width: 36px; height: 12px; background: linear-gradient(90deg, color-mix(in oklab, #22c55e 30%, transparent), color-mix(in oklab, #22c55e 8%, transparent))"
+            ></span>
+            A Session that finished and is still unread tints its whole row
+            green — the same green as its status dot.
+          </p>
+          <p>Sessions outside every Workspace stay neutral.</p>
+          <p>
+            Workspace names are set as section headings, and their Sessions
+            indent beneath them.
+          </p>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

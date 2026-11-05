@@ -1,0 +1,81 @@
+{
+  "format": 1,
+  "title": {
+    "en": "Veduis plugins",
+    "zh": "Veduis 插件"
+  },
+  "description": {
+    "en": "Plugins for DeepSeek Harness, published by Veduis.",
+    "zh": "由 Veduis 发布的 DeepSeek Harness 插件。"
+  },
+  "metadata": {
+    "categories": {
+      "appearance": {
+        "title": {
+          "en": "Appearance",
+          "zh": "外观"
+        }
+      }
+    },
+    "labels": {
+      "sidebar": {
+        "title": {
+          "en": "Sidebar",
+          "zh": "侧栏"
+        }
+      },
+      "quality-of-life": {
+        "title": {
+          "en": "Quality of life",
+          "zh": "体验优化"
+        }
+      }
+    }
+  },
+  "plugins": [
+    {
+      "name": "dsh-workspace-tints",
+      "title": {
+        "en": "Workspace Tints",
+        "zh": "工作区色阶"
+      },
+      "description": {
+        "en": "Quiet gradient tints for every Workspace, a sidebar that reads as a tree, and a green row the moment a chat finishes.",
+        "zh": "为每个工作区提供安静的渐变色调，让侧栏呈现树状层级，并在会话完成时整行染绿。"
+      },
+      "icon": "icons/workspace-tints.svg",
+      "author": "Veduis",
+      "homepage": "https://veduis.com",
+      "metadata": {
+        "category": "appearance",
+        "labels": [
+          "sidebar",
+          "quality-of-life"
+        ],
+        "keywords": [
+          "workspace",
+          "tints",
+          "sidebar",
+          "theme",
+          "hierarchy"
+        ],
+        "sortKeys": {}
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "publishTimestamp": 1793750400,
+          "source": {
+            "type": "npm"
+          },
+          "engines": {
+            "dsh": "^0.2.1-rc.5"
+          }
+        }
+      ],
+      "repository": {
+        "url": "https://github.com/Veduis/dsh-workspace-tints"
+      }
+    }
+  ]
+}

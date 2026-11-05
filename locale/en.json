@@ -1,0 +1,18 @@
+{
+  "meta": {
+    "title": "Workspace Tints",
+    "description": "Gives each Workspace a quiet, stable tint from one warm-to-cool gradient of whites, painted on its sidebar header and session rows, and washes a finished, unread chat green."
+  },
+  "title": "Workspace tints",
+  "description": "Each Workspace keeps one tone from a single warm-to-cool gradient of tinted whites. The tone washes its header and draws a thin rail beside its Sessions, so neighbouring Workspaces separate without adding loud colour. The ramp skips green, which is reserved for finished chats.",
+  "intensity": "Intensity",
+  "off": "Off",
+  "whisper": "Whisper",
+  "soft": "Soft",
+  "legend": "Current tones",
+  "legendHint": "A tone is remembered per folder. A new Workspace takes the tone farthest from the ones in use, so the Workspaces you already know keep their colour.",
+  "empty": "No Workspaces yet.",
+  "ungrouped": "Sessions outside every Workspace stay neutral.",
+  "doneNote": "A Session that finished and is still unread tints its whole row green — the same green as its status dot.",
+  "hierarchyNote": "Workspace names are set as section headings, and their Sessions indent beneath them."
+}
