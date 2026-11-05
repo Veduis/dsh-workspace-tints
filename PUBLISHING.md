@@ -1,8 +1,23 @@
 # Publishing checklist
 
-Everything below is prepared; nothing has been published, tagged, or pushed.
+## Where it is live
 
-## Before the first publish
+| Channel | Status |
+| --- | --- |
+| GitHub repository | **live** — <https://github.com/Veduis/dsh-workspace-tints> (public, homepage `veduis.com`) |
+| Tag `v1.0.0` | **pushed** |
+| GitHub Release with the `.tgz` | **live** — <https://github.com/Veduis/dsh-workspace-tints/releases/tag/v1.0.0> |
+| Plugin market index (GitHub Pages) | **live** — <https://veduis.github.io/dsh-workspace-tints/index.json> |
+| npm | **pending** — this machine has no npm login (`npm whoami` → `ENEEDAUTH`); publishing needs `npm login` first |
+| `veduis.com/dsh/` index | not set up (needs upload to the site) |
+
+Install straight from the release while npm is pending:
+
+```sh
+dsh plugin --profile web add https://github.com/Veduis/dsh-workspace-tints/releases/download/v1.0.0/dsh-workspace-tints-1.0.0.tgz
+```
+
+## Before the npm publish
 
 1. **Package name** — currently `dsh-workspace-tints` (free on npm as of 2026-11-04). To publish under a scope instead, change `name` in `package.json`, the `name` in `cordis.patch.yml`, and the ModuleLoader `id` plus `STYLE_KEY` / `data-plugin` in `client.js` together. They must stay identical or the Client half will not load.
 2. **Repository URL** — done: `https://github.com/Veduis/dsh-workspace-tints` is set in `package.json` and in `market/index.json`, and becomes the **Source code** link on the plugin page.
